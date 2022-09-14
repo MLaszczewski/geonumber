@@ -2,16 +2,33 @@
   "name": "geonumber",
   "version": "0.1.0",
   "description": "Library for encoding geographic coordinates as single number with any number of bits",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLaszczewski/geowords.git",
+    "directory": "packages/geonumber"
+  },
   "main": "index.mjs",
   "scripts": {
     "test": "tape tests/*"
   },
-  "keywords": ["geocode", "what3words", "geonumber", "geowords"],
-  "author": "Michal Laszczewski",
-  "license": "BSD-3-Clause",
-  "private": false,
-  "dependencies": {
+  "keywords": [
+    "geocode",
+    "what3words",
+    "geonumber",
+    "geowords"
+  ],
+  "author": {
+    "name" : "Michał Łaszczewski",
+    "email" : "michal@laszczewski.com",
+    "url" : "https://www.laszczewski.com/"
   },
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/MLaszczewski/geowords",
+  "bugs": {
+    "url" : "https://github.com/MLaszczewski/geowords/issues",
+    "email" : "geowords@laszczewski.com"
+  },
+  "private": false,
   "devDependencies": {
     "tape": "^4.13.2"
   }

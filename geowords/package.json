@@ -1,7 +1,12 @@
 {
   "name": "geowords",
   "version": "0.1.0",
-  "description": "Library for encoding geographic coordinates as single number with any number of bits",
+  "description": "Library for encoding geographic coordinates as sequence of words",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLaszczewski/geowords.git",
+    "directory": "packages/geowords"
+  },
   "main": "index.mjs",
   "scripts": {
     "test": "tape tests/*"
@@ -12,10 +17,19 @@
     "geonumber",
     "geowords"
   ],
-  "author": "Michal Laszczewski",
+  "author": {
+    "name" : "Michał Łaszczewski",
+    "email" : "michal@laszczewski.com",
+    "url" : "https://www.laszczewski.com/"
+  },
   "license": "BSD-3-Clause",
+  "homepage": "https://github.com/MLaszczewski/geowords",
+  "bugs": {
+    "url" : "https://github.com/MLaszczewski/geowords/issues",
+    "email" : "geowords@laszczewski.com"
+  },
   "private": false,
-  "dependencies": {
-    "tape": "^5.6.0"
+  "devDependencies": {
+    "tape": "^4.13.2"
   }
 }
