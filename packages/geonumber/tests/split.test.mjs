@@ -1,5 +1,5 @@
 import test from "tape"
-import {merge, split} from "../index.mjs";
+import { merge, split } from "../index.mjs";
 
 test("split and merge 2 + 2 bits", t => {
   const bits = 2n
@@ -25,6 +25,8 @@ test("split and merge 2 + 3 bits", t => {
     for(let y = 0n; y < (1n << yBits); y++) {
       const merged = merge(y, x, xBits + yBits)
       const [ny, nx] = split(merged, xBits + yBits)
+      console.log(x, nx)
+      console.log(y, ny)
       t.equal(x, nx)
       t.equal(y, ny)
     }

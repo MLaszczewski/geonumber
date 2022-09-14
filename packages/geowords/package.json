@@ -32,6 +32,6 @@
   },
   "private": false,
   "devDependencies": {
-    "tape": "^4.13.2"
+    "tape": "^5.6.0"
   }
 }

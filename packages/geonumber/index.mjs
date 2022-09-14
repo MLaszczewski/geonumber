@@ -25,9 +25,9 @@ export function split(encoded, bits) {
   for(let srcBit = 0n; srcBit < bits; srcBit++) {
     const dstBit = srcBit >> 1n
     if(srcBit & 1n) {
-      a |= ((encoded >> srcBit) & 1n) << dstBit
-    } else {
       b |= ((encoded >> srcBit) & 1n) << dstBit
+    } else {
+      a |= ((encoded >> srcBit) & 1n) << dstBit
     }
   }
   return [ a, b ]
@@ -50,7 +50,7 @@ export function decodeLocation(number, bits) {
   bits = BigInt(bits)
   const latBits = bits >> 1n
   const lonBits = bits - latBits
-  const [encodedLat, encodedLon] = split(number, bits)
+  const [encodedLon, encodedLat] = split(number, bits)
   const normalizedLat = decodeNumber(encodedLat, latBits)
   const normalizedLon = decodeNumber(encodedLon, lonBits)
   const lat = normalizedLat * 180 - 90
