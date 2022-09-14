@@ -1,6 +1,6 @@
 {
   "name": "geowords",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Library for encoding geographic coordinates as sequence of words from bip39 set",
   "repository": {
     "type": "git",
@@ -20,15 +20,15 @@
     "bip39"
   ],
   "author": {
-    "name" : "Michał Łaszczewski",
-    "email" : "michal@laszczewski.com",
-    "url" : "https://www.laszczewski.com/"
+    "name": "Michał Łaszczewski",
+    "email": "michal@laszczewski.com",
+    "url": "https://www.laszczewski.com/"
   },
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/MLaszczewski/geowords",
   "bugs": {
-    "url" : "https://github.com/MLaszczewski/geowords/issues",
-    "email" : "geowords@laszczewski.com"
+    "url": "https://github.com/MLaszczewski/geowords/issues",
+    "email": "geowords@laszczewski.com"
   },
   "private": false,
   "devDependencies": {
