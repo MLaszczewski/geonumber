@@ -1,5 +1,5 @@
 import test from "tape"
-import { merge, split } from "../index.mjs";
+import { merge, split } from "../lib/index.mjs"
 
 test("split and merge 2 + 2 bits", t => {
   const bits = 2n
