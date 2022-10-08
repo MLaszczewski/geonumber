@@ -1,6 +1,6 @@
 {
   "name": "geonumber",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Library for encoding geographic coordinates as single number with any number of bits",
   "repository": {
     "type": "git",
@@ -35,12 +35,10 @@
   },
   "private": false,
   "devDependencies": {
-    "tape": "^5.6.0",
     "renamer": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "tape": "^5.6.0",
     "tsc": "^2.0.4",
-    "typescript": "^4.8.4",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
+    "typescript": "^4.8.4"
   }
 }
