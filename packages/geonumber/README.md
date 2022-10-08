@@ -7,6 +7,7 @@
 > Library for encoding geographic coordinates as single number with any number of bits
 
 ### 🏠 [Homepage](https://github.com/MLaszczewski/geowords)
+### 📄 [Documentation](https://github.com/MLaszczewski/geonumber/packages/geowords/docs.md)
 
 ## Install
 
