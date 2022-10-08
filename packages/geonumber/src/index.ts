@@ -33,7 +33,7 @@ export function split(encoded: bigint, bits: bigint | number): [bigint, bigint] 
   return [ a, b ]
 }
 
-interface Location {
+export interface Location {
   lat: number
   lon: number
 }
