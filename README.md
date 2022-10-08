@@ -7,7 +7,7 @@
 > Library for encoding geographic coordinates as sequence of words from bip39 set
 
 ### 🏠 [Homepage](https://github.com/MLaszczewski/geowords)
-### 📄 [Documentation](https://github.com/MLaszczewski/geowords/packages/geowords/docs.md)
+### 📄 [Documentation](https://github.com/MLaszczewski/geowords/blob/master/packages/geowords/docs.md)
 
 ## Install
 
