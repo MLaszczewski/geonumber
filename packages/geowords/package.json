@@ -1,18 +1,21 @@
 {
   "name": "geowords",
   "version": "0.3.0",
-  "description": "Library for encoding geographic coordinates as sequence of words from bip39 set",
+  "description": "Tool for encoding geographic coordinates as sequence of words from bip39 or other dictionary",
   "repository": {
     "type": "git",
     "url": "https://github.com/MLaszczewski/geowords.git",
     "directory": "packages/geowords"
   },
+  "bin": {
+    "geowords": "./bin/geowords.js"
+  },
   "type": "module",
-  "main": "lib/index.mjs",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "tape tests/*",
-    "build": "rimraf ./lib; tsc --build && renamer --find '/\\.js/i' --replace '.mjs' './lib/**/*'",
+    "test": "npm run build; tape tests/*",
+    "build": "rimraf ./lib; tsc --build",
     "clean": "tsc --build --clean",
     "docs": "typedoc --plugin typedoc-plugin-markdown src/index.ts --githubPages false --readme none --theme markdown && concat-md --dir-name-as-title docs > docs.md && rimraf docs",
     "prepare": "npm run build"
@@ -44,6 +47,7 @@
     "typescript": "^4.8.4",
     "typedoc": "^0.23.15",
     "typedoc-plugin-markdown": "^3.13.6",
-    "concat-md": "^0.5.0"
+    "concat-md": "^0.5.0",
+    "yargs": "^17.2.1"
   }
 }

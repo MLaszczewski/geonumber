@@ -8,11 +8,11 @@
     "directory": "packages/geonumber"
   },
   "type": "module",
-  "main": "lib/index.mjs",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "tape tests/*",
-    "build": "rimraf ./lib; tsc --build && renamer --find '/\\.js/i' --replace '.mjs' './lib/**/*'",
+    "test": "npm run build; tape tests/*",
+    "build": "rimraf ./lib; tsc --build",
     "clean": "tsc --build --clean",
     "docs": "typedoc --plugin typedoc-plugin-markdown src/index.ts --githubPages false --readme none --theme markdown && concat-md --dir-name-as-title docs > docs.md && rimraf docs",
     "prepare": "npm run build"

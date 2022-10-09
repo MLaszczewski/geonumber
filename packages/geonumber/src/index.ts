@@ -12,9 +12,10 @@ export function decodeNumber(encoded: bigint, bits: bigint | number): number {
 export function merge(a: bigint, b: bigint, bits: bigint | number): bigint {
   const cleanBits: bigint = BigInt(bits)
   let result = 0n
+  const oddBits = cleanBits & 1n
   for(let dstBit = 0n; dstBit < cleanBits; dstBit++) {
     const srcBit = dstBit >> 1n
-    result |= ((((dstBit & 1n) ? b : a) >> srcBit) & 1n) << dstBit
+    result |= (((((dstBit & 1n) != oddBits) ? a : b) >> srcBit) & 1n) << dstBit
   }
   return result
 }
@@ -22,9 +23,10 @@ export function split(encoded: bigint, bits: bigint | number): [bigint, bigint] 
   const cleanBits: bigint = BigInt(bits)
   let a = 0n
   let b = 0n
+  const oddBits = cleanBits & 1n
   for(let srcBit = 0n; srcBit < cleanBits; srcBit++) {
     const dstBit = srcBit >> 1n
-    if(srcBit & 1n) {
+    if((srcBit & 1n) == oddBits) {
       b |= ((encoded >> srcBit) & 1n) << dstBit
     } else {
       a |= ((encoded >> srcBit) & 1n) << dstBit
@@ -44,8 +46,10 @@ export function encodeLocation({ lat, lon }:Location, bits: bigint | number): bi
   const lonBits = cleanBits - latBits
   const normalizedLat = (lat + 90) / 180
   const normalizedLon = (lon + 180) / 360
-  const encodedLat = encodeNumber(normalizedLat, latBits)
-  const encodedLon = encodeNumber(normalizedLon, lonBits)
+  const clearedLat = normalizedLat - Math.floor(normalizedLat);
+  const clearedLon = normalizedLon - Math.floor(normalizedLon);
+  const encodedLat = encodeNumber(clearedLat, latBits)
+  const encodedLon = encodeNumber(clearedLon, lonBits)
   const merged = merge(encodedLon, encodedLat, cleanBits)
   return merged
 }

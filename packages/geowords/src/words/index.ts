@@ -1,7 +1,10 @@
-import english from "./english"
+import bip39 from "./bip39.js"
+import doi from "./doi.js"
 
 export {
-  english
+  bip39,
+  doi
 }
 
-export default english
+export const dictionaries = { bip39, doi }
+export default bip39

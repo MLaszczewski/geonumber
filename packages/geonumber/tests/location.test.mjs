@@ -1,5 +1,5 @@
 import test from "tape"
-import { decodeLocation, encodeLocation } from "../lib/index.mjs"
+import { decodeLocation, encodeLocation } from "../lib/index.js"
 
 const randomLocation = () => ({
   lat: Math.random() * 180 - 90,
