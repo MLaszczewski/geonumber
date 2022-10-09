@@ -39,7 +39,7 @@ geowords encode [lat] [lon] [words] [options]
   words  number of words  [default: 4]
 ```
 ```
-geowords.js decode [words...]
+geowords decode [words...]
   words  coordinates encoded as words [required]
 ```
 #### Options:
@@ -50,7 +50,7 @@ geowords.js decode [words...]
 ```
 ### Generate dictionary
 ```
-geowords.js dictionary [sourceFile] [dictFile]
+geowords dictionary [sourceFile] [dictFile]
   sourceFile  file containing text to create dictionary from          [required]
   dictFile    file to save dictionary to                              [required]
 ```
